@@ -1,0 +1,42 @@
+@import "reset";
+@import "normalize";
+@import "mixins";
+@import "colors";
+@import "sizes";
+@import "range";
+@import "option";
+@import "header";
+@import "middle";
+@import "footer";
+
+$font_size_default: 14px;
+
+
+html {
+  font-size: $font_size_default;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  outline: none;
+  -webkit-user-select: none;
+}
+.d-none {
+  display: none;
+}
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #c0c0c0;
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+
+body {
+  display: block;
+  overflow-x: hidden;
+  width: 100vw;
+  max-height: 100vh;
+  color: rgb(70, 70, 70);
+  background: url(../img/bg1.jpg);
+  background-position: center;
+  background-size: cover;
+}

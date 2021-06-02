@@ -1,0 +1,25 @@
+select {
+    width: 300px;
+    height: 26px;
+    font-size: 85%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0;
+    background-color: $base_color;
+    border: none;
+    border-bottom: 3px solid $gold;
+    color: $buttons;
+    padding: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 5px;
+    text-align: center;
+    text-align-last: center;
+
+    &:hover, &:focus {
+        color: $gold;
+        background-color: white;
+        border-bottom-color: $buttons;
+    }
+  }

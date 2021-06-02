@@ -1,0 +1,31 @@
+@mixin boxShadow {   
+    box-shadow: 0px 10px 15px $buttons;    
+}
+
+@mixin buttons {
+    height: 20px;
+    width: 46px;
+    margin-top: 10px;
+    color: $header;
+    border: 1px solid $buttons;
+    &:hover{
+        color:white;
+        background-color: $gold;
+         border: 1px solid $base_color;
+    }
+}
+
+@mixin triangle {
+    outline: none;
+    border: 1px solid transparent;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: solid 2em transparent;
+        border-bottom-color: $buttons;
+        border-top-width: 0;
+        margin: -0.3em -2em; 
+    }
+}

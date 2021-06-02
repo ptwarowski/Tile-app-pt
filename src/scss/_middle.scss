@@ -1,0 +1,376 @@
+
+.middleSection {
+    width: 100vw;
+    height: calc(100vh - 110px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    
+    margin-bottom: auto;
+    margin-top: auto;
+    color: $header;
+    line-height: calc(65vh);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    text-shadow: 0 3px 3px $buttons;
+    a{
+    text-decoration: none;
+    color: $header;
+    }
+    :hover{
+        text-shadow: 0 3px 10px $buttons;
+    }
+}
+
+h2 {
+    
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0 3px 3px $buttons;
+    text-decoration: none;
+    color: $header;
+}
+
+.planSVG{
+    width:70vw;
+    height: 60vh;
+    margin: auto;
+}
+
+#planStrong{
+    filter: drop-shadow(0px 0px 10px $gold);
+    
+}
+#root{
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100vh;
+}
+
+
+#wallLength {
+    font-size: 14px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    &::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+     margin: 0;
+    }
+    &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+         margin: 0;
+        }
+}
+
+.viewSVG {
+    margin:30px auto 0 auto;
+    max-height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#formDraw {
+    opacity: 0.8;
+}
+
+.upPlanButton, .leftPlanButton, .rightPlanButton, .downPlanButton{
+    @include triangle;
+    position: relative;        
+}
+
+.upPlanButton {
+    &::before{
+        top:-21px;
+        left: 6px;
+        
+    }
+}
+
+.leftPlanButton {
+    &::before{
+        transform: rotate(-90deg);
+        top:-15px;
+        left:0px;
+    }
+}
+.rightPlanButton {
+    &::before{
+        transform: rotate(90deg);
+        top:-15px;
+        right:0px;
+    }
+
+}
+.downPlanButton {
+    &::before{
+        transform: rotate(180deg);
+        top: -8px;
+        left: 6px;
+    }
+}
+p span{
+    color: $gold;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.tools{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    left: 320px;
+    position: relative;
+    bottom: 120px;
+    
+}
+.buttonsBox {
+    display:flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: auto;
+    & button {
+        @include buttons;
+        width: auto;
+    }
+}
+.saveBox{
+    @include boxShadow;
+    
+    height: 170px;
+    width: 500px;
+    background-color: $base_color;
+    border: 1px solid $buttons;
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-250px,-85px);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & saveBoxButtons{
+        margin: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    & button{
+        @include buttons;
+        height: 30px;
+        width: 143px;
+        border: none;
+    &:first-child {
+        border-radius: 3px 0 0 3px;
+    }
+    &:last-child {
+        border-radius: 0 3px 3px 0;
+    }
+
+    }
+
+}
+label {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    input {
+        margin-left: 50px;
+        width: 70px;
+        height: 1.2rem;
+        text-align: right;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid $buttons;
+        &::-webkit-outer-spin-button{
+            -webkit-appearance: none;
+             margin: 0;
+            }
+        &::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+                }
+    }
+}
+.planBox{
+    margin: 20px auto 0 auto;
+
+    position: relative;
+    width: $section_width;
+    .saveBox, .addBox {
+        @include boxShadow;
+        background-color: $base_color;
+        border: 1px solid $buttons;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & saveBoxButtons{
+            margin: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    .saveBox {
+        height: 170px;
+        width: 500px;
+        transform: translate(-250px,-85px);
+    }
+    .addBox {
+        height: auto;
+        width: 300px;
+        padding: 20px;
+        transform: translate(-30%,-100px);
+        h5 {
+            margin-bottom: 20px;
+        }
+    }
+}
+.leftWallBtn, .rightWallBtn{
+    @include triangle;
+    position: absolute;
+    opacity: 0.5;
+} 
+.leftWallBtn{
+    top: 150px; 
+    left: 300px;
+    &::before{
+        transform: rotate(-90deg);
+        top:-15px;
+        left:0px;
+    }
+}
+.rightWallBtn{
+    top: 150px; 
+    right: 140px;
+    &::before{
+        transform: rotate(90deg);
+        top:-15px;
+        left:0px;
+    }
+}
+
+.selectBox{
+    width: $width;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.formTileSection{
+    width: $section_width;
+    display:flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+
+    input {
+        margin: 5px 0;
+        width: 170px;
+        height: 25px;
+        text-align: right;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        &::-webkit-outer-spin-button{
+            -webkit-appearance: none;
+             margin: 0;
+            }
+        &::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+                }
+    }
+    p {
+        font-size: 20px;
+    }
+    .tileform{
+        width: $section_width;
+        margin:10px auto;
+        display:flex;
+        flex-direction: row; 
+        justify-content: space-between;  
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            text-align: left;
+            button {
+            @include buttons;
+            border-radius: 3px;
+            height: 25px;
+            width: 170px;
+            font-weight: 700;
+            margin-top: 25px
+            }
+        }
+    }
+}
+.svgTileSection {
+    margin: 40px auto 0 auto;
+    width: $section_width;
+    font-size: 20px;
+    text-align: center;
+}
+.sliders{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80vw;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.calc__btn {
+    @include buttons;
+    
+    
+}  
+.calc__btn__pos {
+    @include buttons;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    left:0;
+    top:0;
+}
+.result {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    span{
+    font-size: 1.5rem;  
+    }
+}
+// section {
+//     max-height: 100vw;
+//     height: 100%;
+//     width: 80%;
+//     margin: auto;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+// }

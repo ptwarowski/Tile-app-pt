@@ -1,0 +1,31 @@
+#footer{
+    height: 50px;
+    width: $width;
+    background-color: #aaa;
+    color: white;
+    margin: auto;  
+    box-shadow: 0 -5px 5px #bbb;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-shadow: 0 3px 3px #444;
+}
+.footer {
+    width:$section_width;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+.aboutMe {
+    width: 100%;
+    margin-top: 10px;
+    text-align: end;
+}
