@@ -344,6 +344,7 @@ export const calculate = (
   restArray = lastArray.filter((item) => item % tile.width !== 0);
   lastArray = lastArray.filter((item) => item % tile.width === 0);
 
+  // eslint-disable-next-line
   let arr = dwArray.filter(
     (item) => (item[0] === 0) | (item[0] === -tile.height)
   );

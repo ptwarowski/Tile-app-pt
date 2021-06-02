@@ -201,6 +201,7 @@ export const DrawWalls = () => {
   ///////
 
   function DrawWallsSVG(displaySVG) {
+    // eslint-disable-next-line
     const [change, setChange] = useState(false);
     const [display, setDisplay] = useState(false);
     const [boxDisplay, setBoxDisplay] = useState(false);

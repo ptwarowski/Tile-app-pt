@@ -35,6 +35,7 @@ export const PutTiles = () => {
   const [line, setLine] = useState([]);
   const [valueSVG, setValueSVG] = useState("");
   const [wallNumber, setWallNumber] = useState(0);
+  // eslint-disable-next-line
   const [change, setChange] = useState(false);
   const [amount, setAmount] = useState(0);
 
