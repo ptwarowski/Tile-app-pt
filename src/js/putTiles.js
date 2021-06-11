@@ -354,7 +354,7 @@ export const PutTiles = () => {
             <p>
               Set tile position: x is <span>{positionArr[wallNumber][0]}</span>{" "}
               and y is <span>{positionArr[wallNumber][1]}</span> from left-bottom
-              corner
+              corner and click calculate button.
             </p>
           
             <input

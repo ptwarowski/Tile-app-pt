@@ -164,6 +164,8 @@ export const DrawPlan = () => {
   let displayDrawBox = ({display}) => {
     if(!display) {return (
     <>
+      <p>Enter the length in the field and click on the triangle showing the direction.</p>
+      <br/>
       <p>X Width: <span>{xTotal}</span>cm, Y Width: <span>{yTotal}</span>cm | X is <span>{xCount}</span>cm from the start, Y is <span>{yCount}</span>cm from the start.</p>
       <div className='tools'>
         <form id="formDraw" className="formDraw">
